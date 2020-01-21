@@ -25,6 +25,8 @@ func NewClient(addr, key string, client *http.Client) *Client {
 	}
 	if client == nil {
 		c.client = http.DefaultClient
+	} else {
+		c.client = client
 	}
 	return &c
 }
